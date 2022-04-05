@@ -1,0 +1,114 @@
+.menu {
+   @include flex();
+   visibility: hidden;
+   position: absolute;
+   top: 0;
+   left: 0;
+   padding: 20px;
+   width: 100vw;
+   height: 100vh;
+   background: rgba($dark-blue, 0.95);
+   z-index: 10;
+
+   @media (min-width: $breakpoint) {
+      visibility: visible;
+      position: relative;
+      width: auto;
+      height: auto;
+      padding: 0;
+      background: transparent;
+   }
+}
+
+.menu_list {
+   @include flex();
+   margin-top: 60px;
+   list-style: none;
+
+   @media (min-width: $breakpoint) {
+      flex-direction: row;
+      margin: 0;
+      align-items: center;
+   }
+}
+
+.menu_item {
+   border-bottom: 1px solid rgba($grayish-blue, 0.4);
+   text-align: center;
+   text-transform: uppercase;
+   color: white;
+   letter-spacing: 3px;
+   font-size: 1.2rem;
+   transition: background 100ms;
+
+   &:first-child {
+      border-top: 1px solid rgba($grayish-blue, 0.4);
+
+      @media (min-width: $breakpoint) {
+         border: none;
+      }
+   }
+
+   &--bold {
+      margin-top: 20px;
+      border: 2px solid white;
+      border-radius: 4px;
+
+      @media (min-width: $breakpoint) {
+         background: $primary-red;
+         box-shadow: 0 5px 15px 0 rgba($dark-blue, 0.2);
+
+         &:hover {
+            border: 2px solid $primary-red;
+            background: white;
+
+            .menu_link {
+               color: $primary-red;
+            }
+         }
+
+         .menu_link {
+            padding: 10px 30px;
+            color: white;
+            font-weight: normal;
+         }
+      }
+   }
+
+   @media (min-width: $breakpoint) {
+      border: 2px solid transparent;
+      margin: 0 20px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      letter-spacing: 0;
+      color: lighten($dark-blue, 20%);
+
+      &:hover .menu_link {
+         color: $primary-red;
+      }
+   }
+}
+
+.menu_link {
+   display: block;
+   padding: 20px;
+   transition: color 100ms;
+
+   @media (min-width: $breakpoint) {
+      padding: 0;
+   }
+}
+
+.menu_icons {
+   display: flex;
+   align-items: center;
+   margin: auto auto 0;
+
+   @media (min-width: $breakpoint) {
+      display: none;
+   }
+}
+
+.menu_icon-link {
+   margin: 20px;
+}

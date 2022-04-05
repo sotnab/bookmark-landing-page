@@ -1,0 +1,42 @@
+.footer {
+   @include flex();
+   align-items: center;
+   background: $dark-blue;
+   padding: 30px 20px;
+   @media (min-width: $breakpoint) {
+      flex-direction: row;
+   }
+}
+
+.footer_logo {
+   margin-bottom: 20px;
+   @media (min-width: $breakpoint) {
+      margin: 0;
+   }
+}
+
+.footer_link {
+   color: darken(white, 20%);
+   text-transform: uppercase;
+   font-size: 0.9rem;
+   letter-spacing: 1px;
+   margin: 10px 0;
+   @media (min-width: $breakpoint) {
+      margin: 0 20px;
+      &:hover {
+         color: $primary-red;
+      }
+   }
+}
+
+.footer_icons {
+   display: flex;
+   align-items: center;
+   @media (min-width: $breakpoint) {
+      margin-left: auto;
+   }
+}
+
+.footer_icon {
+   margin: 20px;
+}

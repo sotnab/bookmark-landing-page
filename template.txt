@@ -1,0 +1,22 @@
+
+container {
+   navbar,
+   intro {
+      a simple...,
+      screenshot
+   },
+   features {
+      header,
+      tabs,
+      content {
+         screenshot,
+         about ss
+      }
+   },
+   download {
+      header,
+      items
+   },
+   questions,
+   footer
+}
